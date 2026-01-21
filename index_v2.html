@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_v2.css">
+</head>
+<body>
+
+    <div class="container signup-mode">
+        <div class="overlay-side">
+            <div class="logo"></div>
+            <h1>Already a Member?</h1>
+            <p>To stay connected with us, please login with your account info</p>
+            <button class="ghost-btn" onclick="location.href='index.html'">SIGN IN</button>
+        </div>
+
+        <div class="form-side">
+            <h1>Create Account</h1>
+            
+            <div class="social-icons">
+                <a href="#">G</a>
+                <a href="#">Git</a>
+            </div>
+            <span class="subtext">or fill in your details for registration:</span>
+            <form>
+                <input type="text" placeholder="Username" required>
+                
+                <div class="row">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Create Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                
+                <button type="submit" class="signup-btn">SIGN UP</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
