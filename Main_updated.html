@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to FraudSheild-AI</title>
+    <button class="menu-btn" onclick="openSidebar()">☰</button>
+
+</head>
+<body>
+    <div id='maintxt'>
+        <h1 id="heading">Welcome to FraudSheild-AI</h1>
+        <p id="small">Stay Safe from Malicious Content with FraudSheild-AI</p>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">✖</button>
+        <br><br><br>
+
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Deepfake Videos Detection</a></li>
+            <li><a href="">AI Images Detection</a></li>
+            <li><a href="">Fraud Websites Detection</a></li>
+            <li><a href="">About Us</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
+<script src="script.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',Arial, sans-serif;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px; /* hidden */
+    width: 220px;
+    height: 100%;
+    background: #0f172a;
+    padding: 20px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: aliceblue;
+
+}
+.sidebar ul {
+    list-style: none;
+    margin-top: 40px;
+    text-decoration: none;
+}
+.menu-btn {
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 5px;
+    background-color: white;
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    border: solid black;
+}
+.close-btn{
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    border: solid black;
+}
+.sidebar ul li {
+    margin: 15px 0;
+}
+.sidebar ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+}
+.sidebar ul li a:hover {
+    background: #334155;
+    color: white;
+}
+
+body{
+    background-image: url("bckg.png");
+    background-size: cover;
+}
+#heading{
+    font-size: 150px;
+    color: white;
+}
+#maintxt{
+    text-align: center;
+    color: white;
+}
+#small{
+    font-size: 30px;
+    color: white;
+}
+</style>
