@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FraudShield AI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root {
+            --primary-purple: #7b4fb6;
+            --soft-blue: #c6deff;
+            --soft-violet: #e2cbf7;
+            --glass-bg: rgba(255, 255, 255, 0.45);
+            --text-dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--soft-blue), var(--soft-violet), #ffffff);
+            background-attachment: fixed;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-purple);
+            letter-spacing: -1px;
+        }
+
+        .hero-section {
+            padding: 80px 5% 40px;
+            text-align: center;
+        }
+
+        .hero-header h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #4a90e2, #7b4fb6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sub-header {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .intro-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 40px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .logo-container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            width: 250px;
+            height: 250px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        .shield-icon {
+            width: 170px;
+            height: 200px;
+            background: white;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .shield-icon::after {
+            content: '';
+            width: 80%;
+            height: 80%;
+            background: rgba(255, 255, 255, 0.1);
+            clip-path: inherit;
+        }
+
+        .text-content {
+            text-align: left;
+            max-width: 600px;
+        }
+
+        .text-content p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #444;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, #4a90e2, #7b4fb6);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo-box{
+            border: none;
+            width: 350px;
+            height: 260px;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            border-radius: 40px;
+            backdrop-filter: blur(10px);
+
+
+
+
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(123, 79, 182, 0.3);
+        }
+
+        .team-section {
+            padding: 40px 5% 100px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .member-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 35px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .member-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .member-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .member-role {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+            margin-bottom: 15px;
+        }
+
+        .member-bio {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        footer {
+            padding: 40px 5%;
+            background: rgba(255,255,255,0.5);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #777;
+        }
+
+        @media (max-width: 900px) {
+            .intro-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .text-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-text">FraudShield AI</div>
+        </nav>
+
+    <header class="hero-section">
+        <div class="hero-header">
+            <h1>About Us</h1>
+            <p class="sub-header">Protecting the digital frontier through AI innovation.</p>
+        </div>
+
+        <div class="intro-container">
+            <div class="logo-box">
+                <div class="shield-icon"></div>
+            </div>
+            <div class="text-content">
+                <p>
+                    FraudShield AI is a smart, AI-powered safety layer designed to make the internet safer and more trustworthy for everyone. By analyzing images, videos, and URLs in real time, we help users verify what is real and what is not.
+                </p>
+                <p>
+                    We believe cybersecurity should be accessible to everyone—students, professionals, and families alike. Our goal is to build a safer digital environment where you can browse and interact with absolute confidence.
+                </p>
+                <button class="btn-primary">Learn More</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="team-section">
+        <h2 class="section-title">Our Team Members</h2>
+        <div class="team-grid">
+            <div class="member-card">
+                <img src="profile.webp" alt="Shiva" class="member-img">
+                <h3>Shiva Awasthi</h3>
+                <div class="member-role">TEAM LEADER</div>
+                <p class="member-bio"></p>
+            </div>
+
+            <div class="member-card">
+                <img src="profile (1).webp" alt="Agrima" class="member-img">
+                <h3>Agrima Mishra</h3>
+                <div class="member-role">BACKEND DEVELOPER</div>
+                <p class="member-bio"></p>
+            </div>
+
+            <div class="member-card">
+                <img src="profile (2).webp" alt="Kaushal" class="member-img">
+                <h3>Kaushal Yadav</h3>
+                <div class="member-role">BACKEND DEVELOPER</div>
+                <p class="member-bio"></p>
+            </div>
+
+            <div class="member-card">
+                <img src="profile (3).webp" alt="Anubhab" class="member-img">
+                <h3>Anubhab Bhattacharjee</h3>
+                <div class="member-role">FRONTEND DEVELOPER</div>
+                <p class="member-bio"></p>
+            </div>
+
+            <div class="member-card">
+                <img src="profile (4).webp" alt="Pragyan" class="member-img">
+                <h3>Pragyan Nanda</h3>
+                <div class="member-role">FRONTEND DEVELOPER</div>
+                <p class="member-bio"></p>
+            </div>
+
+            <div class="member-card">
+                <img src="profile (5).webp" alt="Krish" class="member-img">
+                <h3>Krish Raj</h3>
+                <div class="member-role">FRONTEND DEVELOPER</div>
+                <p class="member-bio"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>&copy; 2026 FraudShield AI. All Rights Reserved.</div>
+        <div>Cybersecurity for Everyone</div>
+    </footer>
+
+</body>
+</html>
